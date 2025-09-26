@@ -38,7 +38,7 @@ Impacto Real
 
 Rodapé (Footer):
 
-Texto institucional: “© 2025 Conecta+ | Promovendo solidariedade e impacto social”.
+Texto institucional: “© 2025 Voluntariar | Promovendo solidariedade e impacto social”.
 
 Links para redes sociais e contatos.
 
