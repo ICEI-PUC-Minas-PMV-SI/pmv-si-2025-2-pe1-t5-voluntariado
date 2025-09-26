@@ -83,7 +83,7 @@ Botões principais: Verde Suave
 
 Fundo: Cinza Claro/Branco
 
-Texto: Preto
+Texto: Preto/branco
 
 ## Tipografia
 
