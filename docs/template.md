@@ -63,17 +63,17 @@ Espaços bem definidos com cards para informações.
 
 ## Cores
 
-Paleta principal (Adobe Color gerada a partir de tons sociais/voluntariado):
+Paleta principal :
 
-Azul Primário: #0099cc (confiança, tecnologia e solidariedade)
+Azul Primário: #0099cc 
 
-Verde Suave: #4CAF50 (esperança, voluntariado, impacto positivo)
+Verde Suave: #4CAF50 
 
-Cinza Claro: #f5f5f5 (background suave)
+Cinza Claro: #f5f5f5 
 
-Preto: #333333 (texto principal)
+Preto: #333333 
 
-Branco: #ffffff (contraste e clareza)
+Branco: #ffffff 
 
 Uso:
 
