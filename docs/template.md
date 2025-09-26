@@ -1,41 +1,6 @@
 # Template padrão do site
 
-Layout padrão do site (HTML e CSS) que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
-
-Explique as guias de estilo utilizadas no seu projeto.
-
-## Design
-
-Detalhe os layouts que serão utilizados. Apresente onde será colocado o logo do sistema. Defina os menus padrões, entre outras coisas.
-
-
-## Cores
-
-Apresente a paleta de cores que será utilizada. Uma ferramenta interessante para a criação de palestas de cores é o *Adobe Color* ([https://color.adobe.com/pt/create/color-wheel](https://color.adobe.com/pt/create/color-wheel)).
-
-
-## Tipografia
-
-Apresente as fontes que serão utilizadas e sua função no site. As principais funções são: Título de página, Título de Seção, Rótulos de componentes e Corpo de Texto.
-
-
-## Iconografia
-
-Defina os ícones que serão utilizados e suas respectivas funções.
-
-Apresente os estilos CSS criados para cada um dos elementos apresentados.
-Outras seções podem ser adicionadas neste documento para apresentar padrões de componentes, de menus, etc.
-
-
-> **Links Úteis**:
->
-> -  [Como criar um guia de estilo de design da Web](https://edrodrigues.com.br/blog/como-criar-um-guia-de-estilo-de-design-da-web/#)
-> - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website Page Layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect Liquid Layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and Why Icons Improve Your Web Design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
->
-> 1. Layout Padrão (HTML e CSS)
+ 1. Layout Padrão (HTML e CSS)
 
 Cabeçalho (Header):
 
@@ -48,8 +13,6 @@ Home
 ONGs
 
 Vagas de Voluntariado
-
-Quem Somos
 
 Cadastro/Entrar
 
@@ -86,9 +49,7 @@ Layout adaptável (flexbox ou grid).
 Menu em formato hambúrguer no mobile.
 
 Imagens fluidas que redimensionam proporcionalmente.
-
-2. Guias de Estilo
-Design
+## Design
 
 O site terá estilo clean e acessível, valorizando clareza e contraste.
 
@@ -98,7 +59,9 @@ Menus fixos no topo para fácil navegação.
 
 Espaços bem definidos com cards para informações.
 
-3. Cores 🎨
+
+
+## Cores
 
 Paleta principal (Adobe Color gerada a partir de tons sociais/voluntariado):
 
@@ -122,7 +85,7 @@ Fundo: Cinza Claro/Branco
 
 Texto: Preto
 
-4. Tipografia ✍️
+## Tipografia
 
 Fonte Principal (Títulos): Poppins
  – moderna, clara e de fácil leitura.
@@ -140,7 +103,8 @@ Rótulos de Componentes e Botões: Roboto Medium, 16px
 
 Corpo do Texto: Roboto Regular, 16px
 
-5. Iconografia 🔹
+
+## Iconografia
 
 Ícones simples e universais, preferencialmente da biblioteca Font Awesome
 :
@@ -156,3 +120,15 @@ Pesquisar vagas → fa-search
 Contato → fa-envelope
 
 Impacto social → fa-hand-holding-heart
+
+
+
+> **Links Úteis**:
+>
+> -  [Como criar um guia de estilo de design da Web](https://edrodrigues.com.br/blog/como-criar-um-guia-de-estilo-de-design-da-web/#)
+> - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
+> - [Website Page Layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
+> - [Perfect Liquid Layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
+> - [How and Why Icons Improve Your Web Design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
+>
+>
