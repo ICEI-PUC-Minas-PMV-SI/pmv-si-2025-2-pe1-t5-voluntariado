@@ -10,7 +10,7 @@ A navegação foi estruturada com base em fluxos simples, permitindo que o usuá
 ## User Flow
 O fluxo de usuário (User Flow) elaborado pela equipe mapeia as principais ações que podem ser realizadas dentro da plataforma, garantindo coerência com as histórias de usuário definidas.
 
-Fluxo do Voluntário
+#Fluxo do Voluntário
 
 Página Inicial: acesso às principais opções da plataforma.
 
@@ -24,7 +24,7 @@ Pesquisar Vagas: busca de oportunidades por filtros e palavras-chave.
 
 Detalhes da Vaga / Inscrição: visualização detalhada da oportunidade e confirmação de participação.
 
-Fluxo da ONG
+#Fluxo da ONG
 
 Página Inicial: acesso ao cadastro institucional.
 
