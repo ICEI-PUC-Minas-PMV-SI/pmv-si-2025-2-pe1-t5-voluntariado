@@ -1,12 +1,19 @@
 # Introdução
 
-Imagine que você deseja apresentar este projeto para investidores que deverão decidir se investem ou não no desenvolvimento da sua ferramenta.
-
-A **Introdução** consiste das etapas: *Contextualização -- Definição do problema -- Definição dos Objetivos -- Justificativa*, e tem como função situar o seu trabalho dentro de um contexto de mercado e mostrar a importância da sua proposta para resolver a dor de um usuário.
-
-A Contextualização deve situar sem projeto em um determinado contexto de mercado, a fim de fornecer informações adicionais que possam ajudar a entender melhor o assunto que você irá abordar. Serve também para definir a relevância do seu assunto, uma vez que mostra o tamanho do mercado em que se está inserido. Ela pode envolver a análise de vários aspectos, como o ambiente histórico, cultural, político e social em que o problema a ser atacado surgiu.
-
-Escreva de 2 a 3 parágrafos para contetualizar o seu projeto.
+O trabalho voluntário é uma das formas mais importantes de contribuição social, mas muitas 
+vezes enfrenta dificuldades de visibilidade e organização. Pessoas dispostas a ajudar, em 
+diversos contextos, nem sempre sabem onde encontrar oportunidades adequadas ao seu 
+perfil ou próximas à sua realidade. Da mesma forma, instituições, organizações não 
+governamentais e grupos comunitários que necessitam de voluntários carecem de meios 
+acessíveis e centralizados para divulgar suas necessidades. 
+Diante desse cenário, nosso projeto propõe o desenvolvimento de um site que funcione 
+como um ponto de encontro entre quem deseja oferecer seu tempo e quem precisa de 
+apoio. A plataforma busca facilitar a comunicação entre voluntários e instituições, criando 
+um ambiente organizado, intuitivo e acessível, onde as oportunidades possam ser 
+divulgadas de forma clara e os interessados possam se candidatar com praticidade. 
+Assim, além de incentivar o engajamento social, o projeto pretende mostrar como a 
+tecnologia pode servir como ferramenta de impacto positivo, promovendo solidariedade e 
+fortalecendo laços comunitários.
 
 ## Problema
 
