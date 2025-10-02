@@ -2,9 +2,8 @@
 
 O template pode ser acessado no link abaixo:
 
-[📄 Visualizar Template](img/prototipo.pdf)
+[📄 Visualizar Template](img/Prototipo.pdf)
 
- 1. Layout Padrão (HTML e CSS)
 
 Cabeçalho (Header):
 
