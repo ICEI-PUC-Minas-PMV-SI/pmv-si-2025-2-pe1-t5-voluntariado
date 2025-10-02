@@ -1,5 +1,9 @@
 # Template padrão do site
 
+O template pode ser acessado no link abaixo:
+
+[📄 Visualizar Template](img/Protótipo.pdf)
+
  1. Layout Padrão (HTML e CSS)
 
 Cabeçalho (Header):
@@ -49,7 +53,10 @@ Layout adaptável (flexbox ou grid).
 Menu em formato hambúrguer no mobile.
 
 Imagens fluidas que redimensionam proporcionalmente.
-## Design
+
+
+
+# Design
 
 O site terá estilo clean e acessível, valorizando clareza e contraste.
 
@@ -61,7 +68,7 @@ Espaços bem definidos com cards para informações.
 
 
 
-## Cores
+# Cores
 
 Paleta principal :
 
@@ -85,13 +92,10 @@ Fundo: Cinza Claro/Branco
 
 Texto: Preto/branco
 
-## Tipografia
+# Tipografia
 
-Fonte Principal (Títulos): Poppins
+Fonte Principal e Secundária: Roboto
  – moderna, clara e de fácil leitura.
-
-Fonte Secundária (Corpo do texto): Roboto
- – neutra, boa para textos longos.
 
 Aplicações:
 
@@ -104,7 +108,7 @@ Rótulos de Componentes e Botões: Roboto Medium, 16px
 Corpo do Texto: Roboto Regular, 16px
 
 
-## Iconografia
+# Iconografia
 
 Ícones simples e universais, preferencialmente da biblioteca Font Awesome
 :
@@ -123,12 +127,3 @@ Impacto social → fa-hand-holding-heart
 
 
 
-> **Links Úteis**:
->
-> -  [Como criar um guia de estilo de design da Web](https://edrodrigues.com.br/blog/como-criar-um-guia-de-estilo-de-design-da-web/#)
-> - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website Page Layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect Liquid Layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and Why Icons Improve Your Web Design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
->
->
