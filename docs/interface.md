@@ -42,3 +42,6 @@ Esse fluxo garante a separação clara dos caminhos de cada perfil de usuário e
 
 ## Wireframes
 
+O wireframe completo pode ser acessado no link abaixo:
+
+[📄 Visualizar Wireframe](img/Wireframe.pdf)
