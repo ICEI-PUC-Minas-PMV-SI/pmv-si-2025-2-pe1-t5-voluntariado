@@ -2,7 +2,7 @@
 
 O template pode ser acessado no link abaixo:
 
-[📄 Visualizar Template](img/Protótipo.pdf)
+[📄 Visualizar Template](img/prototipo.pdf)
 
  1. Layout Padrão (HTML e CSS)
 
