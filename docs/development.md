@@ -25,8 +25,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 | :-----------: | :--------------- | :---------------------------------------------- | :------------------------------------------------ |
 |       Id      | Número (Inteiro) | Identificador do usuário                        | 1                                                 |
 |      Tipo     | Texto            | Tipo de usuário (`voluntário` ou `instituição`) | instituição                                       |
-|    Usuário    | Texto            | Nome de login do usuário                        | @ongverde                                         |
-|    Conteúdo   | E-mail           | E-mail do usuário                               | verdevida@gmail.com |
+|    Conteúdo   | E-mail           | E-mail do usuário                               | verdevida@email.com |
 | Id do usuário | Texto (secreto)  | Senha do usuário                                | ****** (secreto)                                  |
 
 ## Cadastro de Voluntário
