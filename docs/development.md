@@ -46,5 +46,19 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 | Área de Atuação | Texto            | Área em que a ONG atua       | Sustentabilidade                                  |
 |     Conteúdo    | E-mail           | E-mail de contato da ONG     | verdevida@gmail.com |     
 |    Id do usuário  | Texto (secreto)        | Senha cadastrada pelo usuário    | ****** (secreto)                     |
+## Vagas
+|      **Nome**     | **Tipo**         | **Descrição**                                   | **Exemplo**                          |
+| :---------------: | :--------------- | :---------------------------------------------- | :----------------------------------- |
+|         Id        | Número (Inteiro) | Identificador da vaga                           | 10                                   |
+| Id da Instituição | Número (Inteiro) | ID da ONG que criou a vaga                      | 1                                    |
+|       Título      | Texto            | Título da oportunidade de voluntariado          | Professor de Reforço Escolar         |
+|     Descrição     | Texto            | Detalhes da vaga e das atividades do voluntário | Apoio a alunos do ensino fundamental |
+|       Local       | Texto            | Local onde será realizada a atividade           | São Paulo (SP)                       |
+|       Tempo       | Texto            | Duração ou carga horária da vaga                | 6h semanais                          |
+|        Área       | Texto            | Área de atuação                                 | Educação                             |
+|       Ativo       | Booleano         | Indica se a vaga está ativa ou não              | true                                 |
+|        Requisitos       | Texto            | Quem pode se inscrever na vaga                                | Maiores de 16 anos                             |
+|        Benefícios       | Texto            | O que o voluntariado pode ganhar ao participar                                 | Certificado                             |
+
 
 
