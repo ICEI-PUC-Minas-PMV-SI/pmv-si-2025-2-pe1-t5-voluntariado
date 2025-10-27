@@ -43,7 +43,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |        Id       | Número (Inteiro) | Identificador da instituição | 1                                                 |
 |       Nome      | Texto            | Nome da ONG                  | ONG Verde Vida                                    |
 | Área de Atuação | Texto            | Área em que a ONG atua       | Sustentabilidade                                  |
-|     Conteúdo    | E-mail           | E-mail de contato da ONG     | verdevida@gmail.com |     
+|     Conteúdo    | E-mail           | E-mail de contato da ONG     | verdevida@email.com |     
 |    Id do usuário  | Texto (secreto)        | Senha cadastrada pelo usuário    | ****** (secreto)                     |
 ## Vagas
 |      **Nome**     | **Tipo**         | **Descrição**                                   | **Exemplo**                          |
