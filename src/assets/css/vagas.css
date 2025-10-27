@@ -1,0 +1,45 @@
+.lista-vagas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* para espaçar as caixas */
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px; /* espaço entre as caixas (funciona como margin entre elas) */
+}
+
+.lista-vagas .vagas {
+    background-color: var(--cor-cinza-claro);
+    border-radius: 10px;
+    padding: 15px;
+    flex: 1 1 calc(33.33% - 20px); /* largura para 3 por linha, considerando gap */
+    box-sizing: border-box;
+    min-width: 250px; /* para responsividade */
+    border: 2px solid #ccc; /* exemplo de borda visível */
+    margin: auto;
+}
+.search-auth-vagas{
+  margin: 20px;
+ display: block;
+  text-align: center;
+}
+#pesquisasVagas {
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Estilização do link */
+.lista-vagas .vagas a {
+    display: block; 
+    text-align: center;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 30%;
+  margin: 10px auto 0 auto; /* topo: 10px, auto nas laterais centraliza */
+
+}
+.vagas a:hover {
+  transform: translateY(-5px);
+}

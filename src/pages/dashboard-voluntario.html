@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dashboard-voluntario.css">
+</head>
+
+<body>
+   <header>
+        <div class="logo">
+            <img src="../assets/img/logo.png" alt="Logo Voluntairar">
+        </div>
+        <nav class="navbar navbar-light">
+            <a href="index.html">Home</a>
+            <a href="vagas.html">Vagas de voluntariado</a>
+            <a href="dashboard-ong.html">Instituições</a>
+            <a href="sobre.html">Sobre nós</a>
+            <input id="pesquisa" type="text" placeholder="Seacher  🔍 ">
+            <div class="menu-dropdown" tabindex="0">
+                <button class="menu-button">Entrar/Cadastro </button>
+                <div class="dropdown-content">
+                    <a class="entrar" href="login.html">Entrar</a>
+                    <a class="cadastro" href="cadastro.html">Cadastro </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="dashboard-voluntario">
+        <aside class="sidebar">
+            <h2>João da Silva</h2>
+            <p>Voluntário desde 2025</p>
+            <ul>
+                <li><a href="../index.html">🏠 Início</a></li><br>
+                <li><a href="#">🖉 Editar Perfil</a></li><br>
+                <p> </p><br>
+                <li><a id="sair" href="#" onclick="localStorage.clear();window.location.href='login.html'"><span class="icon-space"></span><img id="imagesair" src="https://media-public.canva.com/pqPEg/MAFcfbpqPEg/1/t.png" alt=""> Sair</a></li>
+            </ul>
+        </aside>
+        <main>
+            <section class="section-content">
+                <h2>Minhas Inscrições</h2>
+
+                <div class="inscricoes">
+                    <div class="vaga-car">
+                        <h3>Auxílio em cuidado pet</h3>
+                        <p><strong>Local:</strong> Belo Horizonte (MG)</p>
+                        <p><strong>Status:</strong>Ativo</p>
+                    </div >
+                    <a class="button-perfil" href="ongs/ong4.html">Ver detalhes</a>
+                </div>
+                <hr>
+                <div class="inscricoes" >
+                    <div class="vaga-car" >
+                        <h3>Instrutor de Informática Básica</h3>
+                        <p><strong>Local:</strong> Online (Remoto)</p>
+                        <p><strong>Status:</strong>Ativo</p>
+
+                    </div >
+                    <a class="button-perfil" href="ongs/ong6.html">Ver detalhes</a>
+                </div>
+                <hr>
+            </section>
+            <div class="vagas">
+                <a id="vagas" class="button-perfil" href="vagas.html">Procurar mais vagas</a> 
+            </div>
+        </main>
+
+    </div>
+
+
+</body>
+
+</html>

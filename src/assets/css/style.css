@@ -1,0 +1,229 @@
+/* Importa fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap');
+
+/* ======================= */
+/* Variáveis globais       */
+/* ======================= */
+:root {
+  /* Paleta de cores principais */
+  --cor-azul-primario: #0099cc;
+  --cor-verde-suave: #4CAF50;
+  --cor-amarelo: #ffde59;
+  --cor-cinza-claro: #f5f5f5;
+  --cor-preto: #333333;
+  --cor-branco: #f6f6f6;
+
+  /* Cores específicas por uso */
+  --cor-header: #4d59e3;                         /* Cor de fundo do header */
+  --cor-botao-principal: var(--cor-amarelo);     /* Cor de fundo dos botões */
+  --cor-fundo-principal: var(--cor-cinza-claro); /* Cor de fundo da página */
+  --cor-fundo-secundario: var(--cor-branco);     /* Fundo alternativo */
+  --cor-texto-corpo: var(--cor-preto);           /* Cor padrão do texto */
+  --cor-texto-header: var(--cor-branco);         /* Cor do texto do header */
+
+  /* Fonte padrão */
+  --fonte-principal: 'Roboto', sans-serif;
+
+  /* Tamanhos e pesos tipográficos */
+  --tamanho-titulo-pagina: 32px;
+  --peso-titulo-pagina: 700;         /* Poppins Bold */
+  --tamanho-titulo-secao: 24px;
+  --peso-titulo-secao: 600;          /* Poppins SemiBold */
+  --tamanho-texto: 16px;
+  --peso-botao-label: 500;           /* Roboto Medium */
+  --peso-corpo-texto: 400;           /* Roboto Regular */
+}
+
+/* ======================= */
+/* Estilo global do body   */
+/* ======================= */
+body {
+  font-family: var(--fonte-principal)!important;
+  font-size: var(--tamanho-texto);
+  font-weight: var(--peso-corpo-texto);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ======================= */
+/* HEADER PADRONIZADO IGUAL AO INDEX PRINCIPAL */
+/* ======================= */
+header {
+  background-color: var(--cor-header);
+  color: var(--cor-texto-header);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 40px;
+  height: 70px;
+  width: 100%;
+}
+
+/* Logo */
+.logo img {
+  height: 50px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Campo de pesquisa */
+#pesquisa {
+  padding: 5px 10px;
+  width: 130px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin-left: 10px;
+}
+
+/* Botão e Dropdown */
+.menu-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-button {
+  background-color: var(--cor-amarelo);
+  color: black;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  background-color: #ffdb3a;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Mostrar dropdown ao hover ou foco */
+.menu-dropdown:hover .dropdown-content,
+.menu-dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+/* ======================= */
+/* Títulos                 */
+/* ======================= */
+h1 {
+  font-family: var(--fonte-principal);
+  font-size: var(--tamanho-titulo-pagina);
+  font-weight: var(--peso-titulo-pagina);
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-family: var(--fonte-principal);
+  font-size: var(--tamanho-titulo-secao);
+  font-weight: var(--peso-titulo-secao);
+  margin-bottom: 12px;
+}
+
+/* ======================= */
+/* Estilo dos botões       */
+/* ======================= */
+button {
+  background-color: var(--cor-verde-suave);
+  color: var(--cor-preto);
+  font-family: var(--fonte-principal);
+  font-size: var(--tamanho-texto);
+  font-weight: var(--peso-botao-label);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--cor-botao-principal);
+}
+
+/* ======================= */
+/* Responsividade (Mobile) */
+/* ======================= */
+@media (max-width: 778px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #pesquisa {
+    width: 200px;
+  }
+
+  .menu-button {
+    width: 200px;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+}
+
+/* ======================= */
+/* Logo de entrar antigo   */
+/* ======================= */
+#logoentrar {
+  width: 15px;
+}
