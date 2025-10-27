@@ -21,13 +21,6 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 ## Descrição das estruturas:
 
 ## Login
-|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
-|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| Conteúdo             | E-mail  | E-mail do usuário            | exemplo@gmail.com                                              |
-| Id do usuário         | Numero (Inteiro)             | Cadastro de senha                         | ****** (secreto)                                   |
-| Conteúdo       | Texto             | Conteúdo da notícia                       | Sistemas de Informação da PUC Minas é eleito o melhor curso do Brasil                            |
-| Id do usuário  | Numero (Inteiro)  | Identificador do usuário autor da notícia | 1                                              |
-
 |    **Nome**   | **Tipo**         | **Descrição**                                   | **Exemplo**                                       |
 | :-----------: | :--------------- | :---------------------------------------------- | :------------------------------------------------ |
 |       Id      | Número (Inteiro) | Identificador do usuário                        | 1                                                 |
@@ -35,3 +28,23 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |    Usuário    | Texto            | Nome de login do usuário                        | @ongverde                                         |
 |    Conteúdo   | E-mail           | E-mail do usuário                               | verdevida@gmail.com |
 | Id do usuário | Texto (secreto)  | Senha do usuário                                | ****** (secreto)                                  |
+
+## Cadastro de Voluntário
+|      **Nome**      | **Tipo**               | **Descrição**                    | **Exemplo**                             |
+| :----------------: | :--------------------- | :------------------------------- | :-------------------------------------- |
+|         Id         | Número (Inteiro)       | Identificador do voluntário      | 101                                     |
+|        Nome        | Texto                  | Nome completo do voluntário      | João Ribeiro                            |
+|      Conteúdo      | E-mail                 | E-mail de contato                | joao@email.com |
+| Data de Nascimento | Texto (Data)           | Data de nascimento do voluntário | 15/03/2002                              |
+|    Id do usuário   | Texto (secreto)        | Senha cadastrada pelo usuário    | ****** (secreto)                        |
+
+## Cadastro de Instituição (ONG)
+|     **Nome**    | **Tipo**         | **Descrição**                | **Exemplo**                                       |
+| :-------------: | :--------------- | :--------------------------- | :------------------------------------------------ |
+|        Id       | Número (Inteiro) | Identificador da instituição | 1                                                 |
+|       Nome      | Texto            | Nome da ONG                  | ONG Verde Vida                                    |
+| Área de Atuação | Texto            | Área em que a ONG atua       | Sustentabilidade                                  |
+|     Conteúdo    | E-mail           | E-mail de contato da ONG     | verdevida@gmail.com |     
+|    Id do usuário  | Texto (secreto)        | Senha cadastrada pelo usuário    | ****** (secreto)                     |
+
+
