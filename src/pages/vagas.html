@@ -21,12 +21,14 @@
         <a href="index.html">Home</a>
         <a href="vagas.html">Vagas de voluntariado</a>
         <a href="sobre.html">Sobre nós</a>
+
         <input id="pesquisa" type="text" placeholder="Seacher 🔍">
+
         <div class="menu-dropdown" tabindex="0">
             <button class="menu-button">Entrar/Cadastro</button>
             <div class="dropdown-content">
                 <a class="entrar" href="login.html">Entrar</a>
-                <a class="cadastro" href="cadastro.html">Cadastro</a>
+                <a class="cadastro" href="cadastro-ong.html">Cadastro ONG</a>
             </div>
         </div>
     </nav>
@@ -44,6 +46,7 @@
 
 <script>
     function carregarVagas() {
+        // 🔥 BUSCANDO NO LOCAL STORAGE CERTO
         let vagas = JSON.parse(localStorage.getItem("vagas")) || [];
         const lista = document.getElementById("listaVagas");
 

@@ -1,0 +1,7 @@
+{
+    "instituicoes": [
+        { "nome": "Casa Esperança", "senha": "12345" },
+        { "nome": "Instituto Luz", "senha": "abc123" },
+        { "nome": "Projeto Bem Viver", "senha": "senha2025" }
+    ]
+}
