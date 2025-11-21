@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Voluntário</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/cadastro-vol.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="../assets/img/logo.png" alt="Logo Voluntairar">
+    </div>
+
+    <nav class="navbar navbar-light">
+        <a href="index.html">Home</a>
+        <a href="vagas.html">Vagas</a>
+        <a href="dashboard-ong.html">Instituições</a>
+        <a href="sobre.html">Sobre</a>
+        <input id="pesquisa" type="text" placeholder="Seacher 🔍">
+
+        <div class="menu-dropdown" tabindex="0">
+            <button class="menu-button">Entrar/Cadastro</button>
+            <div class="dropdown-content">
+                <a class="entrar" href="login.html">Entrar</a>
+                <a class="cadastro" href="cadastro-vol.html">Cadastro Voluntário</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="container">
+
+    <h1>Cadastro de Voluntário</h1>
+    <p class="subtitulo">Crie sua conta para se inscrever nas vagas de voluntariado.</p>
+
+    <form id="formVoluntario">
+
+        <div class="form-group">
+            <label>Nome Completo</label>
+            <input type="text" id="nome" required>
+        </div>
+
+        <div class="form-group">
+            <label>E-mail</label>
+            <input type="email" id="email" required>
+        </div>
+
+        <div class="form-group">
+            <label>Telefone</label>
+            <input type="text" id="telefone" placeholder="(00) 00000-0000">
+        </div>
+
+        <div class="form-group">
+            <label>Senha</label>
+            <input type="password" id="senha" required>
+        </div>
+
+        <div class="form-group">
+            <label>Confirmar Senha</label>
+            <input type="password" id="confirmarSenha" required>
+        </div>
+
+        <button type="submit" class="btn-submit">Cadastrar</button>
+    </form>
+
+</main>
+
+<script>
+    document.getElementById("formVoluntario").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const nome = document.getElementById("nome").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const telefone = document.getElementById("telefone").value.trim();
+        const senha = document.getElementById("senha").value;
+        const confirmarSenha = document.getElementById("confirmarSenha").value;
+
+        if (senha !== confirmarSenha) {
+            alert("As senhas não coincidem!");
+            return;
+        }
+
+        // Criar objeto voluntário
+        const voluntario = {
+            nome,
+            email,
+            telefone,
+            senha,
+            criadoEm: new Date().toLocaleDateString()
+        };
+
+        // Salvar no localStorage
+        localStorage.setItem("voluntarioLogado", JSON.stringify(voluntario));
+
+        alert("Cadastro realizado com sucesso!");
+
+        window.location.href = "dashboard-voluntario.html";
+    });
+</script>
+
+</body>
+</html>

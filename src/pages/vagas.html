@@ -47,13 +47,11 @@
 
 <script>
     function carregarVagas() {
-        // 🔥 BUSCANDO NO LOCAL STORAGE CERTO
         let vagas = JSON.parse(localStorage.getItem("vagas")) || [];
         const lista = document.getElementById("listaVagas");
-
         lista.innerHTML = "";
 
-        vagas.forEach(v => {
+        vagas.forEach((v, index) => {
             lista.innerHTML += `
                 <article class="vagas">
                     <h3>${v.instituicao}</h3>
@@ -63,13 +61,55 @@
                         <li><strong>Área:</strong> ${v.area}</li>
                         <li><strong>Tempo:</strong> ${v.tempo}</li>
                     </ul>
+
+                    <button class="btn-candidatar" onclick="candidatar(${index})">
+                        Quero me candidatar 🙋
+                    </button>
                 </article>
             `;
         });
     }
 
+    function candidatar(index) {
+        let vagas = JSON.parse(localStorage.getItem("vagas")) || [];
+        let vagasCandidatadas = JSON.parse(localStorage.getItem("vagas_candidatadas")) || [];
+
+        const vaga = vagas[index];
+
+        // impedir duplicação
+        const jaTem = vagasCandidatadas.some(v => v.titulo === vaga.titulo && v.instituicao === vaga.instituicao);
+
+        if (jaTem) {
+            alert("Você já se candidatou a esta vaga!");
+            return;
+        }
+
+        vagasCandidatadas.push(vaga);
+        localStorage.setItem("vagas_candidatadas", JSON.stringify(vagasCandidatadas));
+
+        alert("Candidatura realizada com sucesso!");
+    }
+
     carregarVagas();
 </script>
+
+<style>
+    .btn-candidatar {
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: #4d59e3;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.2s;
+    }
+
+    .btn-candidatar:hover {
+        background-color: #3946c2;
+    }
+</style>
 
 </body>
 </html>

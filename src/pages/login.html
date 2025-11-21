@@ -1,57 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>formulário</title>
-    <link rel="stylesheet" href="../assets/css/login.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+        }
+
+        .container {
+            width: 350px;
+            margin: 80px auto;
+            padding: 25px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background: #4CAF50;
+            color: #fff;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        .link {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .link a {
+            color: #333;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+</head>
 
 <body>
 
-   <header>
-        <div class="logo">
-            <img src="../assets/img/logo.png" alt="Logo Voluntairar">
-            <div class="menu-dropdown" tabindex="0">
-                </div>
-            </div>
-        </nav>
-    </header>
+    <div class="container">
+        <h2>Login</h2>
 
+        <input id="email" type="email" placeholder="Seu e-mail">
+        <input id="senha" type="password" placeholder="Sua senha">
 
-    <section class="Titulo-Login">
-        <div>
-            <h1>Login de Voluntário</h1>
+        <button onclick="logar()">Entrar</button>
+
+        <div class="link">
+            <p>Não tem conta? <a href="cadastro-vol.html">Cadastre-se</a></p>
         </div>
-        <div>
-            <h3>Entre com sua conta para continuar.</h3>
-        </div>
-    </section>
+    </div>
 
-    <section class="Formulario-Login">
-        <form class="form-login">
-            <h2>Entrar</h2>
+    <script>
+        function logar() {
+            let email = document.getElementById("email").value;
+            let senha = document.getElementById("senha").value;
 
-            <div class="form-group">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
-            </div>
+            let usuario = localStorage.getItem("usuario");
+            usuario = JSON.parse(usuario);
 
-            <div class="form-group">
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
-            </div>
+            if (!usuario) {
+                alert("Nenhum usuário cadastrado!");
+                return;
+            }
 
-            <button type="submit" class="btn-entrar" onclick="window.location.href='dashboard-voluntario.html'">Entrar</button>
+            if (email === usuario.email && senha === usuario.senha) {
+                alert("Login realizado com sucesso!");
+                window.location.href = "dashboard-ong.html"; 
+            } else {
+                alert("E-mail ou senha incorretos!");
+            }
+        }
+    </script>
 
-            <p class="cadastro-link">ou <a href="cadastro.html">crie uma conta</a></p>
-        </form>
-    </section>
-
-
-
-    <script src="script.js"></script>
 </body>
-
 </html>

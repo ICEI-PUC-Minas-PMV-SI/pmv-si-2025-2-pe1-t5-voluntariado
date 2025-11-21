@@ -1,81 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Minhas Vagas</title>
+
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/dashboard-voluntario.css">
+
+    <style>
+        /* Cabeçalho */
+        header {
+          background-color: #4d59e3;
+          color: white;
+          padding: 1rem 2rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-radius: 40px;
+          height: 70px;
+          width: 100%;
+          margin-bottom: 20px;
+        }
+
+        /* Logo */
+        .logo img {
+          height: 50px;
+        }
+
+        /* Navbar */
+        header nav a {
+          color: white;
+          text-decoration: none;
+          margin-left: 1rem;
+          font-weight: bold;
+        }
+
+        header nav a:hover {
+          text-decoration: underline;
+        }
+
+        /* Campo de pesquisa */
+        #pesquisa {
+          padding: 5px 10px;
+          width: 150px;
+          border-radius: 10px;
+          border: none;
+          outline: none;
+        }
+
+        /* Dropdown */
+        .menu-dropdown {
+          position: relative;
+          display: inline-block;
+        }
+
+        .menu-button {
+          background-color: #ffde59;
+          color: black;
+          padding: 8px 15px;
+          border-radius: 10px;
+          font-weight: bold;
+          border: none;
+          cursor: pointer;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          right: 0;
+          background-color: white;
+          min-width: 160px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          z-index: 1;
+          border-radius: 8px;
+        }
+
+        .dropdown-content a {
+          color: #333;
+          padding: 12px 16px;
+          display: block;
+          text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+          background-color: #f1f1f1;
+        }
+
+        .menu-dropdown:hover .dropdown-content,
+        .menu-dropdown:focus-within .dropdown-content {
+          display: block;
+        }
+
+        /* Conteúdo da página */
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+        }
+
+        .dashboard-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .subtitulo {
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .lista-vagas-ong {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .card-vaga {
+            background: #fff;
+            padding: 18px;
+            border-radius: 12px;
+            border: 1px solid #ddd;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            transition: 0.2s;
+        }
+
+        .card-vaga:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+
+        .card-vaga h3 {
+            margin-bottom: 10px;
+        }
+
+        .nao-tem {
+            font-size: 18px;
+            text-align: center;
+            margin-top: 30px;
+            color: #444;
+        }
+    </style>
 </head>
 
 <body>
-   <header>
-        <div class="logo">
-            <img src="../assets/img/logo.png" alt="Logo Voluntairar">
-        </div>
-        <nav class="navbar navbar-light">
-            <a href="index.html">Home</a>
-            <a href="vagas.html">Vagas de voluntariado</a>
-            <a href="dashboard-ong.html">Instituições</a>
-            <a href="sobre.html">Sobre nós</a>
-            <a href="dashboard-ong.html">Dashboard Vagas</a>
-            <input id="pesquisa" type="text" placeholder="Seacher  🔍 ">
-            <div class="menu-dropdown" tabindex="0">
-                <button class="menu-button">Entrar/Cadastro </button>
-                <div class="dropdown-content">
-                    <a class="entrar" href="login.html">Entrar</a>
-                    <a class="cadastro" href="cadastro.html">Cadastro </a>
-                </div>
-            </div>
-        </nav>
-    </header>
 
-
-    <div class="dashboard-voluntario">
-        <aside class="sidebar">
-            <h2>João da Silva</h2>
-            <p>Voluntário desde 2025</p>
-            <ul>
-                <li><a href="../index.html">🏠 Início</a></li><br>
-                <li><a href="#">🖉 Editar Perfil</a></li><br>
-                <p> </p><br>
-                <li><a id="sair" href="#" onclick="localStorage.clear();window.location.href='login.html'"><span class="icon-space"></span><img id="imagesair" src="https://media-public.canva.com/pqPEg/MAFcfbpqPEg/1/t.png" alt=""> Sair</a></li>
-            </ul>
-        </aside>
-        <main>
-            <section class="section-content">
-                <h2>Minhas Inscrições</h2>
-
-                <div class="inscricoes">
-                    <div class="vaga-car">
-                        <h3>Auxílio em cuidado pet</h3>
-                        <p><strong>Local:</strong> Belo Horizonte (MG)</p>
-                        <p><strong>Status:</strong>Ativo</p>
-                    </div >
-                    <a class="button-perfil" href="ongs/ong4.html">Ver detalhes</a>
-                </div>
-                <hr>
-                <div class="inscricoes" >
-                    <div class="vaga-car" >
-                        <h3>Instrutor de Informática Básica</h3>
-                        <p><strong>Local:</strong> Online (Remoto)</p>
-                        <p><strong>Status:</strong>Ativo</p>
-
-                    </div >
-                    <a class="button-perfil" href="ongs/ong6.html">Ver detalhes</a>
-                </div>
-                <hr>
-            </section>
-            <div class="vagas">
-                <a id="vagas" class="button-perfil" href="vagas.html">Procurar mais vagas</a> 
-            </div>
-        </main>
-
+<header>
+    <div class="logo">
+        <img src="../assets/img/logo.png" alt="Logo Voluntairar">
     </div>
 
+    <nav class="navbar navbar-light">
+        <a href="index.html">Home</a>
+        <a href="vagas.html">Vagas</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="dashboard-ong.html">Dashboard Vagas</a>
+
+        <input id="pesquisa" type="text" placeholder="Seacher 🔍">
+
+        <div class="menu-dropdown" tabindex="0">
+            <button class="menu-button">Entrar/Cadastro</button>
+            <div class="dropdown-content">
+                <a class="entrar" href="login.html">Entrar</a>
+                <a class="cadastro" href="cadastro-ong.html">Cadastro ONG</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<div class="dashboard-container">
+    <h1>Vagas às quais me candidatei</h1>
+    <p class="subtitulo">Aqui estão todas as vagas que você escolheu participar</p>
+
+    <div id="lista" class="lista-vagas-ong"></div>
+
+    <p id="nenhuma" class="nao-tem" style="display:none;">Você ainda não se candidatou a nenhuma vaga.</p>
+</div>
+
+<script>
+    function carregarVagas() {
+        let vagas = JSON.parse(localStorage.getItem("vagas_candidatadas")) || [];
+        
+        const lista = document.getElementById("lista");
+        const nenhuma = document.getElementById("nenhuma");
+
+        if (vagas.length === 0) {
+            nenhuma.style.display = "block";
+            return;
+        }
+
+        vagas.forEach(vaga => {
+            const card = document.createElement("div");
+            card.className = "card-vaga";
+
+            card.innerHTML = `
+                <h3>${vaga.titulo}</h3>
+                <p><strong>Instituição:</strong> ${vaga.instituicao}</p>
+                <p><strong>Descrição:</strong> ${vaga.descricao}</p>
+            `;
+
+            lista.appendChild(card);
+        });
+    }
+
+    carregarVagas();
+</script>
 
 </body>
-
 </html>

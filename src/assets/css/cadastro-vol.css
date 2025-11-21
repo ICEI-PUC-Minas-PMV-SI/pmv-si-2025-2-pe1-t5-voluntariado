@@ -1,0 +1,56 @@
+/* Container */
+.container {
+    width: 90%;
+    max-width: 500px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Títulos */
+h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Formulário */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+}
+
+/* Botão */
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: #4d59e3;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background: #3c47c0;
+}
