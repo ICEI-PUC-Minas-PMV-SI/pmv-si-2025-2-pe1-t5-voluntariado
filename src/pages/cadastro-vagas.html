@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Vaga - Voluntariar</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/cadastro-ong.css">
+</head>
+
+<body>
+<header>
+    <div class="logo">
+        <img src="../assets/img/logo.png" alt="Logo Voluntairar">
+    </div>
+    <nav class="navbar navbar-light">
+        <a href="index.html">Home</a>
+        <a href="vagas.html">Vagas de voluntariado</a>
+        <a href="sobre.html">Sobre nós</a>
+        <input id="pesquisa" type="text" placeholder="Seacher 🔍">
+        <div class="menu-dropdown" tabindex="0">
+            <button class="menu-button">Entrar/Cadastro</button>
+            <div class="dropdown-content">
+                <a class="entrar" href="login.html">Entrar</a>
+                <a class="cadastro" href="cadastro.html">Cadastro</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="main-content">
+    <div class="content-wrapper">
+
+        <div class="form-section">
+            <h1 class="form-title">Cadastro de Vaga</h1>
+            <p class="form-subtitle">Preencha os dados da vaga de voluntariado.</p>
+
+            <form id="cadastroVagaForm">
+
+                <div class="form-group">
+                    <label for="instituicao">Instituição</label>
+                    <input type="text" id="instituicao" name="instituicao" placeholder="Nome da instituição" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tituloVaga">Título da Vaga</label>
+                    <input type="text" id="tituloVaga" name="tituloVaga" placeholder="Ex: Professor voluntário" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="local">Local</label>
+                    <input type="text" id="local" name="local" placeholder="Ex: São Paulo (SP) ou Remoto" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="area">Área</label>
+                    <input type="text" id="area" name="area" placeholder="Ex: Educação, Saúde, Animais..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tempo">Tempo necessário</label>
+                    <input type="text" id="tempo" name="tempo" placeholder="Ex: 4h por semana" required>
+                </div>
+
+                <button type="submit" class="btn-submit">Cadastrar Vaga</button>
+
+            </form>
+        </div>
+
+        <!-- Mantenho sua ilustração -->
+        <div class="illustration-section">
+            <svg class="house-illustration" viewBox="0 0 400 400">
+                <!-- sua ilustração aqui -->
+            </svg>
+        </div>
+
+    </div>
+</main>
+
+<script>
+    document.getElementById("cadastroVagaForm").addEventListener("submit", function(e){
+        e.preventDefault();
+
+        const vaga = {
+            instituicao: document.getElementById("instituicao").value,
+            titulo: document.getElementById("tituloVaga").value,
+            local: document.getElementById("local").value,
+            area: document.getElementById("area").value,
+            tempo: document.getElementById("tempo").value
+        };
+
+        // salva no localStorage
+        let vagas = JSON.parse(localStorage.getItem("vagas")) || [];
+        vagas.push(vaga);
+        localStorage.setItem("vagas", JSON.stringify(vagas));
+
+        alert("Vaga cadastrada com sucesso!");
+        window.location.href = "vagas.html";
+    });
+</script>
+
+</body>
+</html>
