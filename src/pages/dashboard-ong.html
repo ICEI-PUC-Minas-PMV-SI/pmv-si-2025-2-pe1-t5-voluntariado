@@ -5,22 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard ONG</title>
-
-    <!-- CSS do dashboard -->
     <link rel="stylesheet" href="../assets/css/dashboard-ong.css">
 </head>
 
 <body>
 
-<!-- ============================== -->
-<!--       CABEÇALHO DASHBOARD      -->
-<!-- ============================== -->
-
 <header>
     <div class="logo">
         <img src="../assets/img/logo.png" alt="Logo Voluntairar">
     </div>
-
     <nav class="navbar navbar-light">
         <a href="index.html">Home</a>
         <a href="vagas.html">Vagas</a>
@@ -30,7 +23,7 @@
         <input id="pesquisa" type="text" placeholder="Pesquisar ONG 🔍">
 
         <div class="menu-dropdown" tabindex="0">
-            <button class="menu-button">Sair</button>
+            <button class="menu-button" id="logoutBtn">Sair</button>
             <div class="dropdown-content">
                 <a class="entrar" href="login.html">Trocar Conta</a>
                 <a class="cadastro" href="cadastro-ong.html">Cadastrar ONG</a>
@@ -39,41 +32,98 @@
     </nav>
 </header>
 
-
-<!-- ============================== -->
-<!--       FILTROS DO DASHBOARD     -->
-<!-- ============================== -->
-
-<section class="filtros-container">
-    <select id="filtroArea">
-        <option value="">Filtrar por Área</option>
-    </select>
-
-    <select id="filtroLocal">
-        <option value="">Filtrar por Local</option>
-    </select>
-
-    <select id="filtroTempo">
-        <option value="">Filtrar por Tempo</option>
-    </select>
-</section>
-
-
-<!-- ============================== -->
-<!--       CONTEÚDO DO DASHBOARD    -->
-<!-- ============================== -->
-
 <main class="dashboard-container">
 
-    <h1>Dashboard de Vagas</h1>
-    <p class="subtitulo">Todas as vagas cadastradas agrupadas por instituição.</p>
+    <!-- Login ONG -->
+    <div class="login-ong" id="loginOng">
+        <h2>Login da ONG</h2>
+        <input type="text" id="nomeOng" placeholder="Nome da ONG">
+        <input type="password" id="senhaOng" placeholder="Senha da ONG">
+        <button id="btnLoginOng">Entrar</button>
+    </div>
 
-    <div id="listaVagasOng"></div>
+    <!-- Lista de Vagas -->
+    <div id="listaVagasOng" class="lista-vagas-ong" style="display:none;"></div>
 
 </main>
 
+<script src="../assets/js/storage.js"></script>
+<script>
+    const loginDiv = document.getElementById("loginOng");
+    const listaDiv = document.getElementById("listaVagasOng");
+    const btnLogin = document.getElementById("btnLoginOng");
+    const logoutBtn = document.getElementById("logoutBtn");
 
-<script src="../assets/js/dashboard-ong.js"></script>
+    let ongLogada = null;
+
+    btnLogin.addEventListener("click", () => {
+        const nome = document.getElementById("nomeOng").value.trim();
+        const senha = document.getElementById("senhaOng").value.trim();
+
+        const ongs = getOngs();
+        const ong = ongs.find(o => o.nome === nome && o.senha === senha);
+
+        if (!ong) {
+            alert("Nome ou senha incorretos!");
+            return;
+        }
+
+        ongLogada = ong;
+        loginDiv.style.display = "none";
+        listaDiv.style.display = "grid";
+        carregarVagasDaOng();
+    });
+
+    logoutBtn.addEventListener("click", () => {
+        ongLogada = null;
+        loginDiv.style.display = "block";
+        listaDiv.style.display = "none";
+    });
+
+    function carregarVagasDaOng() {
+        const todasVagas = getVagas();
+        const vagasDaOng = todasVagas.filter(v => v.instituicao === ongLogada.nome);
+
+        if (vagasDaOng.length === 0) {
+            listaDiv.innerHTML = "<p class='nao-tem'>Nenhuma vaga cadastrada ainda.</p>";
+            return;
+        }
+
+        listaDiv.innerHTML = "";
+
+        vagasDaOng.forEach((vaga, index) => {
+            const card = document.createElement("div");
+            card.classList.add("card-vaga");
+            card.innerHTML = `
+                <h3>${vaga.titulo}</h3>
+                <p><strong>Local:</strong> ${vaga.local}</p>
+                <p><strong>Área:</strong> ${vaga.area}</p>
+                <p><strong>Tempo:</strong> ${vaga.tempo}</p>
+                <button class="btn-excluir" data-index="${index}">Excluir</button>
+            `;
+            listaDiv.appendChild(card);
+        });
+
+        // Botão excluir
+        const botoesExcluir = document.querySelectorAll(".btn-excluir");
+        botoesExcluir.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const idx = parseInt(btn.getAttribute("data-index"));
+                excluirVaga(idx);
+            });
+        });
+    }
+
+    function excluirVaga(idx) {
+        const todasVagas = getVagas();
+        const vagasDaOng = todasVagas.filter(v => v.instituicao === ongLogada.nome);
+        const vagaParaExcluir = vagasDaOng[idx];
+
+        const novaLista = todasVagas.filter(v => v !== vagaParaExcluir);
+        saveVagas(novaLista);
+        carregarVagasDaOng();
+    }
+</script>
 
 </body>
 </html>
