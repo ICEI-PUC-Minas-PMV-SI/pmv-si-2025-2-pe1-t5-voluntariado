@@ -7,6 +7,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 ### Requisitos Funcionais
 
 |ID    | Descrição do Requisito |  Artefato Criado |
+| ---------------------------- | --------------------------------------- | --------------------------------------------------- | 
 |RF-001| Permitir cadastro de voluntários com informações básicas (nome, e-mail telefone). | cadastro-vol.html |
 |RF-002| Permitir cadastro de instituições/ONGs com informações básicas (nome, área de atuação, contato). |   cadastro-ong.html |
 |RF-003| Exibir lista de oportunidades cadastradas pelas instituições |   vagas.html |
@@ -18,22 +19,18 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 ### Requisitos Não Funcionais
 
 |ID	|Descrição|	Atendido|Como|
-|RNF-01| A plataforma deve ser responsiva e funcionar em dispositivos
-móveis.
-|	✔|	CSS responsivo|
-|RNF-02| A interface deve ser intuitiva, com navegação simples para
-diferentes perfis de usuários.|	✔|	Layout simplificado|
+| ---------------------------- | --------------------------------------- | --------------------------------------------------- | ------------------------------------------------- |
+|RNF-01| A plataforma deve ser responsiva e funcionar em dispositivos móveis.|	✔|	CSS responsivo|
+|RNF-02| A interface deve ser intuitiva, com navegação simples para diferentes perfis de usuários.|	✔|	Layout simplificado|
 |RNF-03| O sistema deve estar disponível online, com acesso 24/7|	✔|	Arquivos estáticos|
-|RNF-04| Disponibilizar um campo de login e senha para acesso de
-voluntários e instituições.
-|	✔|	login.js + LocalStorage|
+|RNF-04| Disponibilizar um campo de login e senha para acesso de voluntários e instituições.|	✔|	login.js + LocalStorage|
 
 
 ## Descrição das estruturas:
 
 ## Login
 |  Nome      | Tipo          | Descrição                             | Exemplo                                   |
-
+| ---------------------------- | --------------------------------------- | --------------------------------------------------- | ------------------------------------------------- |
 | login.html     | Formulário de autenticação  | Tela para login de voluntários e instituições        |                                             |
 | Email          | Texto             | E-mail cadastrado                | voluntario@email.com                                         |
 | Senha       | Texto (senha)        | Senha do usuário para acesso ao sistema| ******** |
